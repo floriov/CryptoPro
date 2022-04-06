@@ -47,6 +47,7 @@ export default class CryptoStreamer extends React.Component {
             '5~CCCAGG~ETC~JPY',
         ]
       };
+      console.log(props)
     }
 
     dataUnpack = (data) => {
