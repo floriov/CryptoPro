@@ -30,18 +30,13 @@ CCC.STATIC.CURRENCY = CCC.STATIC.CURRENCY || {};
 CCC.STATIC.CURRENCY.SYMBOL = {
 	'BTC'  : 'Ƀ'
   , 'LTC'  : 'Ł'
-  , 'DAO'  : 'Ð'
   , 'USD'  : '$'
   , 'CNY'  : '¥'
   , 'EUR'  : '€'
   , 'GBP'  : '£'
   , 'JPY'  : '¥'
-  , 'PLN'  : 'zł'
-  , 'RUB'  : '₽'
   , 'ETH'  : 'Ξ'
-  , 'GOLD' : 'Gold g'
-  , 'INR'  : '₹'
-  , 'BRL'  : 'R$'
+  , 'ZAR'  : 'R'
 };
 
 CCC.STATIC.CURRENCY.getSymbol = function(symbol){

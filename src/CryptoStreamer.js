@@ -128,7 +128,7 @@ export default class CryptoStreamer extends React.Component {
 
     handleFormatNumber = (number) => {
       const n = parseFloat(number).toFixed(2);
-      return '$ ' + Number(n).toLocaleString('en');
+      return Number(n).toLocaleString('en');
     }
 
     render() {
