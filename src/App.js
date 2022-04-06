@@ -8,7 +8,11 @@ export default class App extends React.Component {
       return (
         <div className="App">
           <header className="App-header">
+            
             <img src={logo} className="App-logo" alt="logo" />
+            <h1 className="Header">
+              Crypto Pro
+            </h1>
           </header>
           <CryptoStreamer />
         </div>
