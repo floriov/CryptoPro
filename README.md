@@ -12,6 +12,8 @@ This project allows you to stream real time crypto currency data using Socket.io
 - `npm install`
 - `npm start`
 
+When the react app opens up in your browser, simply click on 'start stream' to see the live conversions of crypto into fiat currencies. 
+
 ##### Example Bitcoin JSON Object you get back from CryptoCompare
 
 ```json

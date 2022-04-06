@@ -79,7 +79,7 @@ export default class CryptoStreamer extends React.Component {
         (currentPrice[pair].PRICE - currentPrice[pair].OPEN24HOUR) /
         currentPrice[pair].OPEN24HOUR * 100).toFixed(2) + '%';
 
-      // Check cryptos array for like objects and replace each crypto with updated version
+      
       const indexOfCrypto = this.state.cryptos.indexOf(currentPrice[pair]);
       if (indexOfCrypto === -1) {
         this.state.cryptos.push(currentPrice[pair]);
@@ -134,9 +134,10 @@ export default class CryptoStreamer extends React.Component {
     render() {
       return (
         <div className='col-md-offset-1 col-md-10'>
-          <button type='button' onClick={ this.handleStartStream } className='btn btn-success'>Start Stream</button>
-          <button type='button' onClick={ this.handleStopStream } className='btn btn-danger'>Stop Stream</button>
-
+           <div data-testid= "stream-buttons">
+            <button type='button' onClick={ this.handleStartStream } className='btn btn-success'>Start Stream</button>
+            <button type='button' onClick={ this.handleStopStream } className='btn btn-danger'>Stop Stream</button>
+          </div>
           <BootstrapTable ref='allTable' data={ this.state.cryptos } search>
             <TableHeaderColumn
               dataField='FROMSYMBOL'
