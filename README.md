@@ -7,7 +7,6 @@ This project allows you to stream real time cryptocurrency data using Socket.io 
 
 ### Get Started
 - `git clone`
-- `cd crypto-stream`
 - `npm install`
 - `npm start`
 
