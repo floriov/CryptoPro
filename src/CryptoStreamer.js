@@ -158,7 +158,7 @@ export default class CryptoStreamer extends React.Component {
             <TableHeaderColumn
               dataField='CHANGE24HOURPCT'
               columnClassName={ this.handlePriceChange }
-              dataSort>Change 24h 
+              dataSort>Change 24h (%)
             </TableHeaderColumn>
             <TableHeaderColumn
               dataField='VOLUME24HOURTO'
