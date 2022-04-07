@@ -1,4 +1,4 @@
-# Crypto Pro
+# CryptoPro
 ![crypto-pro-demo](https://user-images.githubusercontent.com/97796341/162019654-e1b99c7b-4546-4209-b3d3-527ff197ae8c.PNG)
 
 CryptoPro provides a real time crytpocurrency stream for crypto currencies [BTC,ETH,XRP,LTC,BCH,ETC] and their value in fiat currencies [USD,GBP,EUR,JPY,ZAR].
