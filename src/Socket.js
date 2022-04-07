@@ -31,12 +31,13 @@ CCC.STATIC.CURRENCY.SYMBOL = {
 	'BTC'  : 'Ƀ'
   , 'LTC'  : 'Ł'
   , 'USD'  : '$'
-  , 'CNY'  : '¥'
   , 'EUR'  : '€'
   , 'GBP'  : '£'
   , 'JPY'  : '¥'
-  , 'ETH'  : 'Ξ'
   , 'ZAR'  : 'R'
+  , 'RUB'  : '₽'
+  , 'ETH'  : 'Ξ'
+  ,
 };
 
 CCC.STATIC.CURRENCY.getSymbol = function(symbol){
@@ -364,8 +365,7 @@ CCC.CURRENT.unpack = function(value)
         }
         else if(maskInt&this.FIELDS[property])
         {
-			//i know this is a hack, for cccagg, future code please don't hate me:(, i did this to avoid
-			//subscribing to trades as well in order to show the last market
+			
          	if(property === 'LASTMARKET'){
                 unpackedCurrent[property] = valuesArray[currentField];
             }else{

@@ -1,9 +1,9 @@
 # Crypto Pro
 ![crypto-pro-demo](https://user-images.githubusercontent.com/97796341/162019654-e1b99c7b-4546-4209-b3d3-527ff197ae8c.PNG)
 
-CryptoPro provides a real time crytpo currency stream for crypto currencies [BTC,ETH,XRP,LTC,BCH,ETC] and their value in fiat currencies [USD,GBP,EUR,JPY,ZAR].
+CryptoPro provides a real time crytpocurrency stream for crypto currencies [BTC,ETH,XRP,LTC,BCH,ETC] and their value in fiat currencies [USD,GBP,EUR,JPY,ZAR].
 
-This project allows you to stream real time crypto currency data using Socket.io by plugging into CryptoCompare's web socket api. It also comes with a react-bootstrap-table.
+This project allows you to stream real time cryptocurrency data using Socket.io by plugging into CryptoCompare's web socket api. It also comes with a react-bootstrap-table.
 
 ### Get Started
 - `git clone`

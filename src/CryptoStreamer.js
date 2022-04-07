@@ -4,6 +4,8 @@ import './CryptoStreamer.css'
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import CCC from './Socket';
 
+// Format: {SubscriptionId}~{ExchangeName}~{FromSymbol}~{ToSymbol}
+// SubscriptionId 0 for TRADE, 2 for CURRENT and 5 for CURRENTAGG
 
 import io from 'socket.io-client';
 const socket = io.connect('https://streamer.cryptocompare.com/');
@@ -15,39 +17,38 @@ export default class CryptoStreamer extends React.Component {
         currentPrice: {},
         cryptos: [],
         subscription: [
-            '5~CCCAGG~BTC~USD',
-            '5~CCCAGG~BTC~EUR',
-            '5~CCCAGG~BTC~GBP',
-            '5~CCCAGG~BTC~ZAR',
-            '5~CCCAGG~BTC~JPY',
-            '5~CCCAGG~ETH~USD',
-            '5~CCCAGG~ETH~EUR',
-            '5~CCCAGG~ETH~GBP',
-            '5~CCCAGG~ETH~ZAR',
-            '5~CCCAGG~ETH~JPY',
-            '5~CCCAGG~XRP~USD',
-            '5~CCCAGG~XRP~EUR',
-            '5~CCCAGG~XRP~GBP',
-            '5~CCCAGG~XRP~ZAR',
-            '5~CCCAGG~XRP~JPY',
-            '5~CCCAGG~BCH~USD',
-            '5~CCCAGG~BCH~EUR',
-            '5~CCCAGG~BCH~GBP',
-            '5~CCCAGG~BCH~ZAR',
-            '5~CCCAGG~BCH~JPY',
-            '5~CCCAGG~LTC~USD',
-            '5~CCCAGG~LTC~EUR',
-            '5~CCCAGG~LTC~GBP',
-            '5~CCCAGG~LTC~ZAR',
-            '5~CCCAGG~LTC~JPY',
-            '5~CCCAGG~ETC~USD',
-            '5~CCCAGG~ETC~EUR',
-            '5~CCCAGG~ETC~GBP',
-            '5~CCCAGG~ETC~ZAR',
-            '5~CCCAGG~ETC~JPY',
+          '5~CCCAGG~BTC~USD',
+          '5~CCCAGG~BTC~EUR',
+          '5~CCCAGG~BTC~GBP',
+          '5~CCCAGG~BTC~ZAR',
+          '5~CCCAGG~BTC~JPY',
+          '5~CCCAGG~ETH~USD',
+          '5~CCCAGG~ETH~EUR',
+          '5~CCCAGG~ETH~GBP',
+          '5~CCCAGG~ETH~ZAR',
+          '5~CCCAGG~ETH~JPY',
+          '5~CCCAGG~XRP~USD',
+          '5~CCCAGG~XRP~EUR',
+          '5~CCCAGG~XRP~GBP',
+          '5~CCCAGG~XRP~ZAR',
+          '5~CCCAGG~XRP~JPY',
+          '5~CCCAGG~BCH~USD',
+          '5~CCCAGG~BCH~EUR',
+          '5~CCCAGG~BCH~GBP',
+          '5~CCCAGG~BCH~ZAR',
+          '5~CCCAGG~BCH~JPY',
+          '5~CCCAGG~LTC~USD',
+          '5~CCCAGG~LTC~EUR',
+          '5~CCCAGG~LTC~GBP',
+          '5~CCCAGG~LTC~ZAR',
+          '5~CCCAGG~LTC~JPY',
+          '5~CCCAGG~ETC~USD',
+          '5~CCCAGG~ETC~EUR',
+          '5~CCCAGG~ETC~GBP',
+          '5~CCCAGG~ETC~ZAR',
+          '5~CCCAGG~ETC~JPY',
         ]
       };
-      console.log(props)
     }
 
     dataUnpack = (data) => {
@@ -141,7 +142,7 @@ export default class CryptoStreamer extends React.Component {
           <BootstrapTable ref='allTable' data={ this.state.cryptos } search>
             <TableHeaderColumn
               dataField='FROMSYMBOL'
-              isKey dataSort>Symbol
+              isKey dataSort> Cryptocurrency
             </TableHeaderColumn>
             <TableHeaderColumn
               dataField='PRICE'
