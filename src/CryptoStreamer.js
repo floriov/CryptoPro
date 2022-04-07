@@ -2,7 +2,7 @@ import React from 'react';
 import './react-bootstrap-table-all.min.css'
 import './CryptoStreamer.css'
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
-import CCC from './ccc-streamer-utilities';
+import CCC from './Socket';
 
 
 import io from 'socket.io-client';
@@ -80,7 +80,7 @@ export default class CryptoStreamer extends React.Component {
         (currentPrice[pair].PRICE - currentPrice[pair].OPEN24HOUR) /
         currentPrice[pair].OPEN24HOUR * 100).toFixed(2) + '%';
 
-      // Check cryptos array for like objects and replace each crypto with updated version
+      
       const indexOfCrypto = this.state.cryptos.indexOf(currentPrice[pair]);
       if (indexOfCrypto === -1) {
         this.state.cryptos.push(currentPrice[pair]);
